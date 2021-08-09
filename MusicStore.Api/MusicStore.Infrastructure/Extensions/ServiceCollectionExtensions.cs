@@ -2,6 +2,7 @@
 using Serilog;
 using System;
 using Microsoft.Extensions.Configuration;
+using MusicStore.Infrastructure.Models;
 
 namespace MusicStore.Infrastructure.Extensions
 {
@@ -9,7 +10,8 @@ namespace MusicStore.Infrastructure.Extensions
     {
         public static void RegisterInfrastructureDependencies(this IServiceCollection services, IConfiguration configuration)
         {
-            ConfigureLogger(configuration.GetValue<string>("DatadogApiKey"), configuration.GetValue<string>("Environment"));
+            var serilogConfig = configuration.GetSection("Serilog").Get<SerilogConfigModel>();
+            ConfigureLogger(serilogConfig.DatadogApiKey, serilogConfig.Environment);
         }
 
         /// <summary>
