@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MusicStore.Api.Extensions;
+using MusicStore.Api.Models;
 using MusicStore.ApplicationServices.Extensions;
 using MusicStore.Infrastructure.Extensions;
 
@@ -21,7 +22,7 @@ namespace MusicStore.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.RegisterApiDependencies();
+            services.RegisterApiDependencies(Configuration);
             services.RegisterApplicationServicesDependencies();
             services.RegisterInfrastructureDependencies(Configuration);
         }
@@ -31,9 +32,10 @@ namespace MusicStore.Api
         {
             if (env.IsDevelopment())
             {
+                var swaggerConfig = Configuration.GetSection("Swagger").Get<SwaggerConfigModel>();
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MusicStore.Api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint(swaggerConfig.EndPoint, swaggerConfig.ApiName));
             }
 
             app.UseHttpsRedirection();
