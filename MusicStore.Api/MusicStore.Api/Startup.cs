@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
+using MusicStore.Api.Extensions;
+using MusicStore.ApplicationServices.Extensions;
+using MusicStore.Infrastructure.Extensions;
 
 namespace MusicStore.Api
 {
@@ -19,12 +21,9 @@ namespace MusicStore.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MusicStore.Api", Version = "v1" });
-            });
+            services.RegisterApiDependencies();
+            services.RegisterApplicationServicesDependencies();
+            services.RegisterInfrastructureDependencies();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
