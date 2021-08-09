@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Api", "MusicStore.Api\MusicStore.Api.csproj", "{C2A84D7C-C747-42FC-82C5-763F3572077B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Api", "MusicStore.Api\MusicStore.Api.csproj", "{C2A84D7C-C747-42FC-82C5-763F3572077B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Api.Tests", "MusicStore.Api.Tests\MusicStore.Api.Tests.csproj", "{7999664C-6F21-4A27-B916-1E3FAF787F36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.ApplicationServices", "MusicStore.ApplicationServices\MusicStore.ApplicationServices.csproj", "{0B42772A-32D7-47AE-885A-AAE5718231BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.ApplicationServices.Tests", "MusicStore.ApplicationServices.Tests\MusicStore.ApplicationServices.Tests.csproj", "{52CF2A03-53E0-4E26-9D51-F561A26682FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Domain", "MusicStore.Domain\MusicStore.Domain.csproj", "{EA2BB247-7511-4CBA-878D-D389FEDB79D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Infrastructure", "MusicStore.Infrastructure\MusicStore.Infrastructure.csproj", "{7DCE58FD-1EFB-4330-A972-0EBE584130B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Infrastructure.Tests", "MusicStore.Infrastructure.Tests\MusicStore.Infrastructure.Tests.csproj", "{43C93EBB-5762-4DCC-9F95-83AE8FD618C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{C2A84D7C-C747-42FC-82C5-763F3572077B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2A84D7C-C747-42FC-82C5-763F3572077B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2A84D7C-C747-42FC-82C5-763F3572077B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7999664C-6F21-4A27-B916-1E3FAF787F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7999664C-6F21-4A27-B916-1E3FAF787F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7999664C-6F21-4A27-B916-1E3FAF787F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7999664C-6F21-4A27-B916-1E3FAF787F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B42772A-32D7-47AE-885A-AAE5718231BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B42772A-32D7-47AE-885A-AAE5718231BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B42772A-32D7-47AE-885A-AAE5718231BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B42772A-32D7-47AE-885A-AAE5718231BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CF2A03-53E0-4E26-9D51-F561A26682FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CF2A03-53E0-4E26-9D51-F561A26682FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CF2A03-53E0-4E26-9D51-F561A26682FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CF2A03-53E0-4E26-9D51-F561A26682FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA2BB247-7511-4CBA-878D-D389FEDB79D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2BB247-7511-4CBA-878D-D389FEDB79D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2BB247-7511-4CBA-878D-D389FEDB79D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2BB247-7511-4CBA-878D-D389FEDB79D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DCE58FD-1EFB-4330-A972-0EBE584130B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DCE58FD-1EFB-4330-A972-0EBE584130B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DCE58FD-1EFB-4330-A972-0EBE584130B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DCE58FD-1EFB-4330-A972-0EBE584130B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C93EBB-5762-4DCC-9F95-83AE8FD618C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C93EBB-5762-4DCC-9F95-83AE8FD618C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C93EBB-5762-4DCC-9F95-83AE8FD618C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C93EBB-5762-4DCC-9F95-83AE8FD618C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
